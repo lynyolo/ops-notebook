@@ -98,6 +98,13 @@ git remote add origin https://github.com/username/my-notes.git
 
 ```
 git remote -v
+
+# 如果输入错误，重新关联远程仓库
+# 方法一--修正
+git remote set-url origin https://github.com/username/my-notes.git
+# 方法二--重设
+git remote remove origin
+git remote add origin https://github.com/user/ops-notebook.git
 ```
 
 ## 7. 上传到 GitHub
@@ -121,6 +128,16 @@ git add .
 git commit -m "update notes"
 git push
 ```
+
+PS：
+
+```BASH
+git branch
+# 输出master，强制转为main，然后上传
+git branch -M main
+```
+
+
 
 ## 8. 其他-检查仓库状态
 
